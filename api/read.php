@@ -32,7 +32,7 @@
         }
         //convert to JSON and display output
         echo json_encode($post_arr);
-    }else {
+    }else{
         echo json_encode(array('message' => 'No Posts Found.'));
     }
 ?>
