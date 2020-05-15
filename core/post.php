@@ -138,5 +138,29 @@
             printf('Error %s. \n', $stmt->error);
             return false;
         }
+
+        //Delete a record
+        public function delete() {
+            /* Delete query */
+            $query = 'DELETE FROM '.$this->table.' WHERE id = :id';
+
+            /* Prepare Statement */
+            $stmt = $this->conn->prepare($query);
+
+            /* Clean data*/
+            $this->id = htmlspecialchars(strip_tags($this->id));
+
+             /* Binding of id parameter */
+            $stmt->bindParam(':id', $this->id);
+
+             /* Execute query */
+             if($stmt->execute()) {
+                return true;
+            }
+
+            /* Print error */
+            printf('Error %s. \n', $stmt->error);
+            return false;
+        }
     }
 ?>
