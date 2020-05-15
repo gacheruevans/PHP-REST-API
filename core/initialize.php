@@ -6,9 +6,9 @@
     defined('INC_PATH') ? null : define('INC_PATH', SITE_ROOT.DS.'includes');
     defined('CORE_PATH') ? null : define('CORE_PATH', SITE_ROOT.DS.'core');
 
-    //load config files first
+    //Load config files first
     require_once(INC_PATH.DS.'config.php');
 
-    //core classes
+    //Core classes
     require_once(CORE_PATH.DS.'post.php');
 ?>

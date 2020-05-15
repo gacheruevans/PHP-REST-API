@@ -1,17 +1,17 @@
 <?php
-    //headers
+    //Headers
     header('Access-Control-Allow-Origin: *');
     header('Content-Type: application/json');
 
-    //initializes Api
+    //Initializes Api
     include_once('../core/initialize.php');
 
-    //instantiate post
+    //Instantiate post
     $post = new Post($db);
 
-    //blog post query
+    //Get all records query
     $result = $post->read();
-    //get row count
+    //Get row count
     $num = $result->rowCount();
 
     if($num > 0) {
@@ -30,9 +30,10 @@
            ); 
            array_push($post_arr['data'], $post_item);
         }
-        //convert to JSON and display output
+
+        /* Convert to JSON and display output */
         echo json_encode($post_arr);
     }else{
-        echo json_encode(array('message' => 'No Posts Found.'));
+        echo json_encode(array('Message' => 'No Posts Found.'));
     }
 ?>

@@ -27,7 +27,7 @@
         );
     }else {
         echo json_encode(
-            array('Message' => 'Post Was Not Updated.')
+            array('Message' => 'Post Not Updated.')
         ); 
     }
 ?>

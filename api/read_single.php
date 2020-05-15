@@ -1,12 +1,12 @@
 <?php
-    //headers
+    //Headers
     header('Access-Control-Allow-Origin: *');
     header('Content-Type: application/json');
 
-    //initializes Api
+    //Initializes Api
     include_once('../core/initialize.php');
 
-    //instantiate post
+    //Instantiate post
     $post = new Post($db);
 
     $post->id = isset($_GET['id']) ? $_GET['id'] : die();
@@ -21,6 +21,6 @@
         'category_name' => $post->category_name
     );
 
-    //make JSON
+    //Make JSON
     print_r(json_encode($post_arr));
 ?>
