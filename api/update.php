@@ -23,7 +23,7 @@
     //Update post
     if($post->update()) {
         echo json_encode(
-            array('Message' => 'Post Update.')
+            array('Message' => 'Post Updated.')
         );
     }else {
         echo json_encode(
