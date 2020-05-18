@@ -3,7 +3,7 @@ Simple PHP CRUD API - Blog Post.
 This app uses AMPPS - a WAMP/MAMP Stack. 
 It includes Apache, PHP, PERL, Python(mod_wsgi), MySQL, MongoDB, phpMyAdmin, RockMongo, FTP Server - FileZilla Server(Windows) and Pure-FTPd(Mac).
 
-##Task Description:
+## Task Description:
 In this exercise I was required to create a PHP REST API application. Specification for the API is shown below.
 
 | Endpoint                 				               		   | Functionality 						 |    
